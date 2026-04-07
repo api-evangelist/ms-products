@@ -1,6 +1,7 @@
 aid: ms-products
 name: Microsoft Products APIs
-description: Collection of Microsoft product and service APIs
+description: >-
+  Collection of Microsoft product and service APIs.
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 url: https://www.microsoft.com
@@ -8,35 +9,38 @@ created: '2024'
 modified: '2026-03-16'
 specificationVersion: '0.19'
 tags:
-- Microsoft
-- Cloud
-- Enterprise
-- Productivity
-- Azure
-- Office 365
+  - Microsoft
+  - Cloud
+  - Enterprise
+  - Productivity
+  - Azure
+  - Office 365
 apis:
-- name: Microsoft Graph API
-  description: Unified API endpoint for accessing Microsoft 365, Windows, and Enterprise Mobility + Security services
-  image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
-  humanURL: https://developer.microsoft.com/en-us/graph
-  baseURL: https://graph.microsoft.com/v1.0
-  tags:
-  - Microsoft 365
-  - Azure AD
-  - Office
-  - Teams
-  properties:
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/graph/
-  - type: Authentication
-    url: https://learn.microsoft.com/en-us/graph/auth/
+  - name: Microsoft Graph API
+    description: >-
+      Unified API endpoint for accessing Microsoft 365, Windows, and Enterprise Mobility
+      + Security services.
+    image: 
+      https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://developer.microsoft.com/en-us/graph
+    baseURL: https://graph.microsoft.com/v1.0
+    tags:
+      - Microsoft 365
+      - Azure AD
+      - Office
+      - Teams
+    properties:
+      - type: Documentation
+        url: https://learn.microsoft.com/en-us/graph/
+      - type: Authentication
+        url: https://learn.microsoft.com/en-us/graph/auth/
 common:
-- type: Portal
-  url: https://developer.microsoft.com/
-- type: Terms of Service
-  url: https://www.microsoft.com/en-us/legal/terms-of-use
-- type: Privacy Policy
-  url: https://privacy.microsoft.com/
+  - type: Portal
+    url: https://developer.microsoft.com/
+  - type: Terms of Service
+    url: https://www.microsoft.com/en-us/legal/terms-of-use
+  - type: Privacy Policy
+    url: https://privacy.microsoft.com/
 maintainers:
-- FN: Kin Lane
-  email: kin@apievangelist.com
+  - FN: Kin Lane
+    email: kin@apievangelist.com
