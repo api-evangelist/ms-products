@@ -9,8 +9,8 @@ Collection of Microsoft product and service APIs
 
 ## Timestamps
 
-- **Created:** 2024 
-- **Modified:** 2024 
+- **Created:** 2024-01-01
+- **Modified:** 2026-04-28
 
 ## APIs
 
@@ -169,8 +169,14 @@ APIs for Xbox gaming services and social features
 - [Documentation](https://learn.microsoft.com/en-us/gaming/xbox-live/)
 - [API Reference](https://learn.microsoft.com/en-us/gaming/xbox-live/api-ref/)
 
+## Common Properties
+
+- [Portal](https://developer.microsoft.com/)
+- [Terms of Service](https://www.microsoft.com/en-us/legal/terms-of-use)
+- [Privacy Policy](https://privacy.microsoft.com/)
+
 ## Maintainers
 
-**FN:** Microsoft
+**FN:** Kin Lane
 
-**Email:** support@microsoft.com
+**Email:** kin@apievangelist.com
