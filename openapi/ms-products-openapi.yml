@@ -1,0 +1,192 @@
+openapi: 3.1.0
+info:
+  title: Microsoft Graph API (v1.0)
+  description: >-
+    Unified Microsoft Graph REST API for accessing Microsoft 365, Entra ID
+    (Azure AD), Outlook, OneDrive, Teams, Planner, and other services. All
+    requests target the `https://graph.microsoft.com/v1.0` endpoint and use
+    OAuth 2.0 (Microsoft identity platform) bearer tokens for authentication.
+  version: 1.0.0
+  contact:
+    name: Microsoft Graph
+    url: https://developer.microsoft.com/graph
+  x-generated-from: https://learn.microsoft.com/en-us/graph/api/overview?view=graph-rest-1.0
+  x-generated-by: claude-crawl-2026-05-08
+servers:
+  - url: https://graph.microsoft.com/v1.0
+    description: Microsoft Graph v1.0 production endpoint
+security:
+  - oauth2: []
+tags:
+  - name: Users
+    description: User accounts and profiles in Microsoft Entra ID.
+  - name: Me
+    description: Operations on the signed-in user.
+  - name: Groups
+    description: Microsoft 365 groups and security groups.
+  - name: Mail
+    description: Outlook mail messages for the signed-in user.
+  - name: Calendar
+    description: Outlook calendar events for the signed-in user.
+paths:
+  /users:
+    get:
+      tags: [Users]
+      operationId: listUsers
+      summary: List users in the directory
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Collection'
+  /users/{userId}:
+    get:
+      tags: [Users]
+      operationId: getUser
+      summary: Get a user by id or userPrincipalName
+      parameters:
+        - $ref: '#/components/parameters/UserId'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Resource'
+  /me:
+    get:
+      tags: [Me]
+      operationId: getMe
+      summary: Get the profile of the signed-in user
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Resource'
+  /me/messages:
+    get:
+      tags: [Mail]
+      operationId: listMyMessages
+      summary: List the signed-in user's Outlook messages
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Collection'
+  /me/events:
+    get:
+      tags: [Calendar]
+      operationId: listMyEvents
+      summary: List the signed-in user's calendar events
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Collection'
+  /me/calendar:
+    get:
+      tags: [Calendar]
+      operationId: getMyCalendar
+      summary: Get the signed-in user's default calendar
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Resource'
+  /groups:
+    get:
+      tags: [Groups]
+      operationId: listGroups
+      summary: List groups in the directory
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Collection'
+  /groups/{groupId}:
+    get:
+      tags: [Groups]
+      operationId: getGroup
+      summary: Get a group by id
+      parameters:
+        - $ref: '#/components/parameters/GroupId'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Resource'
+  /groups/{groupId}/members:
+    get:
+      tags: [Groups]
+      operationId: listGroupMembers
+      summary: List members of a group
+      parameters:
+        - $ref: '#/components/parameters/GroupId'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Collection'
+components:
+  securitySchemes:
+    oauth2:
+      type: oauth2
+      description: >-
+        Microsoft identity platform OAuth 2.0. Acquire access tokens from
+        https://login.microsoftonline.com/{tenant}/oauth2/v2.0/token and
+        send as `Authorization: Bearer <token>`.
+      flows:
+        authorizationCode:
+          authorizationUrl: https://login.microsoftonline.com/common/oauth2/v2.0/authorize
+          tokenUrl: https://login.microsoftonline.com/common/oauth2/v2.0/token
+          scopes:
+            'https://graph.microsoft.com/.default': Default app permissions
+        clientCredentials:
+          tokenUrl: https://login.microsoftonline.com/common/oauth2/v2.0/token
+          scopes:
+            'https://graph.microsoft.com/.default': Default app permissions
+  parameters:
+    UserId:
+      name: userId
+      in: path
+      required: true
+      schema:
+        type: string
+      description: User id (object id) or userPrincipalName.
+    GroupId:
+      name: groupId
+      in: path
+      required: true
+      schema:
+        type: string
+      description: Group id.
+  schemas:
+    Resource:
+      type: object
+      additionalProperties: true
+    Collection:
+      type: object
+      additionalProperties: true
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/Resource'
+        '@odata.nextLink':
+          type: string

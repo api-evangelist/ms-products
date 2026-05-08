@@ -38,6 +38,8 @@ apis:
         url: https://learn.microsoft.com/en-us/graph/auth/
       - type: SDKs
         url: https://learn.microsoft.com/en-us/graph/sdks/sdks-overview
+      - type: OpenAPI
+        url: openapi/ms-products-openapi.yml
   - name: Azure REST API
     description: REST APIs for Azure cloud services and resource management.
     image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
