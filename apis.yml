@@ -54,7 +54,7 @@ apis:
         url: https://learn.microsoft.com/en-us/rest/api/azure/
       - type: Authentication
         url: https://learn.microsoft.com/en-us/azure/active-directory/develop/
-      - type: API Reference
+      - type: APIReference
         url: https://learn.microsoft.com/en-us/rest/api/
   - name: Office 365 APIs
     description: >-
@@ -70,7 +70,7 @@ apis:
     properties:
       - type: Documentation
         url: https://learn.microsoft.com/en-us/office/dev/add-ins/
-      - type: Getting Started
+      - type: GettingStarted
         url: https://developer.microsoft.com/en-us/office/getting-started
   - name: Microsoft Teams API
     description: Build apps and bots for the Microsoft Teams collaboration platform.
@@ -100,7 +100,7 @@ apis:
     properties:
       - type: Documentation
         url: https://learn.microsoft.com/en-us/onedrive/developer/
-      - type: API Reference
+      - type: APIReference
         url: https://learn.microsoft.com/en-us/onedrive/developer/rest-api/
   - name: Power Platform APIs
     description: APIs for Power Apps, Power Automate, and Power BI.
@@ -134,7 +134,7 @@ apis:
     properties:
       - type: Documentation
         url: https://learn.microsoft.com/en-us/azure/cognitive-services/
-      - type: API Reference
+      - type: APIReference
         url: https://learn.microsoft.com/en-us/azure/cognitive-services/reference/
   - name: Dynamics 365 API
     description: APIs for Dynamics 365 CRM and ERP applications.
@@ -162,7 +162,7 @@ apis:
     properties:
       - type: Documentation
         url: https://learn.microsoft.com/en-us/microsoft-365/security/defender/
-      - type: API Reference
+      - type: APIReference
         url: https://learn.microsoft.com/en-us/microsoft-365/security/defender/api-overview
   - name: Xbox Live API
     description: APIs for Xbox gaming services and social features.
@@ -176,14 +176,14 @@ apis:
     properties:
       - type: Documentation
         url: https://learn.microsoft.com/en-us/gaming/xbox-live/
-      - type: API Reference
+      - type: APIReference
         url: https://learn.microsoft.com/en-us/gaming/xbox-live/api-ref/
 common:
   - type: Portal
     url: https://developer.microsoft.com/
-  - type: Terms of Service
+  - type: TermsOfService
     url: https://www.microsoft.com/en-us/legal/terms-of-use
-  - type: Privacy Policy
+  - type: PrivacyPolicy
     url: https://privacy.microsoft.com/
   - type: Integrations
     url: https://www.microsoft.com/en-us/marketplace
