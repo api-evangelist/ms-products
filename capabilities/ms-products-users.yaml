@@ -1,0 +1,102 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Microsoft Graph API (v1.0) — Users
+  description: 'Microsoft Graph API (v1.0) — Users. 2 operations. Lead operation: List users in the directory. Self-contained
+    Naftiko capability covering one Ms Products business surface.'
+  tags:
+  - Ms Products
+  - Users
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    MS_PRODUCTS_API_KEY: MS_PRODUCTS_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: ms-products-users
+    baseUri: https://graph.microsoft.com/v1.0
+    description: Microsoft Graph API (v1.0) — Users business capability. Self-contained, no shared references.
+    resources:
+    - name: users
+      path: /users
+      operations:
+      - name: listusers
+        method: GET
+        description: List users in the directory
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: users-userId
+      path: /users/{userId}
+      operations:
+      - name: getuser
+        method: GET
+        description: Get a user by id or userPrincipalName
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    authentication:
+      type: bearer
+      token: '{{env.MS_PRODUCTS_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: ms-products-users-rest
+    port: 8080
+    description: REST adapter for Microsoft Graph API (v1.0) — Users. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/users
+      name: users
+      description: REST surface for users.
+      operations:
+      - method: GET
+        name: listusers
+        description: List users in the directory
+        call: ms-products-users.listusers
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/users/{userid}
+      name: users-userid
+      description: REST surface for users-userId.
+      operations:
+      - method: GET
+        name: getuser
+        description: Get a user by id or userPrincipalName
+        call: ms-products-users.getuser
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: ms-products-users-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Microsoft Graph API (v1.0) — Users. One tool per consumed operation, routed inline through
+      this capability's consumes block.
+    tools:
+    - name: list-users-directory
+      description: List users in the directory
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ms-products-users.listusers
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-user-id-userprincipalname
+      description: Get a user by id or userPrincipalName
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ms-products-users.getuser
+      outputParameters:
+      - type: object
+        mapping: $.

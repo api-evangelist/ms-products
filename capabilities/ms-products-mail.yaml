@@ -1,0 +1,70 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Microsoft Graph API (v1.0) — Mail
+  description: 'Microsoft Graph API (v1.0) — Mail. 1 operations. Lead operation: List the signed-in user''s Outlook messages.
+    Self-contained Naftiko capability covering one Ms Products business surface.'
+  tags:
+  - Ms Products
+  - Mail
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    MS_PRODUCTS_API_KEY: MS_PRODUCTS_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: ms-products-mail
+    baseUri: https://graph.microsoft.com/v1.0
+    description: Microsoft Graph API (v1.0) — Mail business capability. Self-contained, no shared references.
+    resources:
+    - name: me-messages
+      path: /me/messages
+      operations:
+      - name: listmymessages
+        method: GET
+        description: List the signed-in user's Outlook messages
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    authentication:
+      type: bearer
+      token: '{{env.MS_PRODUCTS_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: ms-products-mail-rest
+    port: 8080
+    description: REST adapter for Microsoft Graph API (v1.0) — Mail. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/me/messages
+      name: me-messages
+      description: REST surface for me-messages.
+      operations:
+      - method: GET
+        name: listmymessages
+        description: List the signed-in user's Outlook messages
+        call: ms-products-mail.listmymessages
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: ms-products-mail-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Microsoft Graph API (v1.0) — Mail. One tool per consumed operation, routed inline through
+      this capability's consumes block.
+    tools:
+    - name: list-signed-user-s-outlook-messages
+      description: List the signed-in user's Outlook messages
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ms-products-mail.listmymessages
+      outputParameters:
+      - type: object
+        mapping: $.
