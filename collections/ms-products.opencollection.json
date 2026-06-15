@@ -1,0 +1,184 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Microsoft Graph API (v1.0)",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "client_credentials",
+      "accessTokenUrl": "https://login.microsoftonline.com/common/oauth2/v2.0/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Users",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List users in the directory",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://graph.microsoft.com/v1.0/users"
+          },
+          "docs": "List users in the directory"
+        },
+        {
+          "info": {
+            "name": "Get a user by id or userPrincipalName",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://graph.microsoft.com/v1.0/users/:userId",
+            "params": [
+              {
+                "name": "userId",
+                "value": "",
+                "type": "path",
+                "description": "User id (object id) or userPrincipalName."
+              }
+            ]
+          },
+          "docs": "Get a user by id or userPrincipalName"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Me",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get the profile of the signed-in user",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://graph.microsoft.com/v1.0/me"
+          },
+          "docs": "Get the profile of the signed-in user"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Mail",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List the signed-in user's Outlook messages",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://graph.microsoft.com/v1.0/me/messages"
+          },
+          "docs": "List the signed-in user's Outlook messages"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Calendar",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List the signed-in user's calendar events",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://graph.microsoft.com/v1.0/me/events"
+          },
+          "docs": "List the signed-in user's calendar events"
+        },
+        {
+          "info": {
+            "name": "Get the signed-in user's default calendar",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://graph.microsoft.com/v1.0/me/calendar"
+          },
+          "docs": "Get the signed-in user's default calendar"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Groups",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List groups in the directory",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://graph.microsoft.com/v1.0/groups"
+          },
+          "docs": "List groups in the directory"
+        },
+        {
+          "info": {
+            "name": "Get a group by id",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://graph.microsoft.com/v1.0/groups/:groupId",
+            "params": [
+              {
+                "name": "groupId",
+                "value": "",
+                "type": "path",
+                "description": "Group id."
+              }
+            ]
+          },
+          "docs": "Get a group by id"
+        },
+        {
+          "info": {
+            "name": "List members of a group",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://graph.microsoft.com/v1.0/groups/:groupId/members",
+            "params": [
+              {
+                "name": "groupId",
+                "value": "",
+                "type": "path",
+                "description": "Group id."
+              }
+            ]
+          },
+          "docs": "List members of a group"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
