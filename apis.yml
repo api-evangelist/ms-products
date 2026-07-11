@@ -173,6 +173,12 @@ apis:
       - type: APIReference
         url: https://learn.microsoft.com/en-us/gaming/xbox-live/api-ref/
 common:
+  - type: VulnerabilityDisclosure
+    url: security/ms-products-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/ms-products-domain-security.yml
+  - type: Authentication
+    url: authentication/ms-products-authentication.yml
   - type: OAuthScopes
     url: scopes/ms-products-scopes.yml
   - url: https://azure.microsoft.com/en-us/blog/feed/
