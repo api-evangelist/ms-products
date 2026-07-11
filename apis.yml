@@ -173,6 +173,10 @@ apis:
       - type: APIReference
         url: https://learn.microsoft.com/en-us/gaming/xbox-live/api-ref/
 common:
+  - type: OAuthScopes
+    url: scopes/ms-products-scopes.yml
+  - url: https://azure.microsoft.com/en-us/blog/feed/
+    type: Blog
   - type: GitHubOrganization
     url: https://github.com/microsoft
   - type: Portal

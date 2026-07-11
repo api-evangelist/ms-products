@@ -1,0 +1,22 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/ms-products-openapi.yml
+schemes:
+- name: oauth2
+  source: openapi/ms-products-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://login.microsoftonline.com/common/oauth2/v2.0/authorize
+    tokenUrl: https://login.microsoftonline.com/common/oauth2/v2.0/token
+  - flow: clientCredentials
+    tokenUrl: https://login.microsoftonline.com/common/oauth2/v2.0/token
+  description: 'Microsoft identity platform OAuth 2.0. Acquire access tokens from https://login.microsoftonline.com/{tenant}/oauth2/v2.0/token
+    and send as `Authorization: Bearer <token>`.'
+scopes:
+- scope: https://graph.microsoft.com/.default
+  description: Default app permissions
+  flows:
+  - authorizationCode
+  - clientCredentials
+  sources:
+  - openapi/ms-products-openapi.yml
