@@ -173,6 +173,8 @@ apis:
       - type: APIReference
         url: https://learn.microsoft.com/en-us/gaming/xbox-live/api-ref/
 common:
+  - type: AgenticAccess
+    url: agentic-access/ms-products-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/ms-products-vulnerability-disclosure.yml
   - type: DomainSecurity
