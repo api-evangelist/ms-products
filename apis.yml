@@ -4,7 +4,20 @@ description: >-
   Collection of Microsoft product and service APIs spanning Microsoft 365, Azure, Dynamics 365, Power Platform,
   security, gaming, and more.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/ms-products.png
 url: https://www.microsoft.com
 created: '2024-01-01'
 modified: '2026-05-19'
@@ -17,161 +30,220 @@ tags:
   - Office 365
   - Productivity
 apis:
-  - name: Microsoft Graph API
-    description: Unified API endpoint for accessing Microsoft 365, Windows, and Enterprise Mobility + Security services.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://developer.microsoft.com/en-us/graph
-    baseURL: https://graph.microsoft.com/v1.0
-    tags:
-      - Azure AD
-      - Microsoft 365
-      - Office
-      - OneDrive
-      - Outlook
-      - Teams
-    properties:
-      - type: Documentation
-        url: https://learn.microsoft.com/en-us/graph/
-      - type: Authentication
-        url: https://learn.microsoft.com/en-us/graph/auth/
-      - type: SDKs
-        url: https://learn.microsoft.com/en-us/graph/sdks/sdks-overview
-      - type: OpenAPI
-        url: openapi/ms-products-openapi.yml
-  - name: Azure REST API
-    description: REST APIs for Azure cloud services and resource management.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://azure.microsoft.com
-    tags:
-      - Azure
-      - Cloud
-      - Infrastructure
-      - Resource Management
-    properties:
-      - type: Documentation
-        url: https://learn.microsoft.com/en-us/rest/api/azure/
-      - type: Authentication
-        url: https://learn.microsoft.com/en-us/azure/active-directory/develop/
-      - type: APIReference
-        url: https://learn.microsoft.com/en-us/rest/api/
-  - name: Office 365 APIs
-    description: APIs for Office 365 applications including Outlook, Calendar, Contacts, and Files.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://developer.microsoft.com/en-us/office
-    tags:
-      - Calendar
-      - Email
-      - Office 365
-      - Outlook
-    properties:
-      - type: Documentation
-        url: https://learn.microsoft.com/en-us/office/dev/add-ins/
-      - type: GettingStarted
-        url: https://developer.microsoft.com/en-us/office/getting-started
-  - name: Microsoft Teams API
-    description: Build apps and bots for the Microsoft Teams collaboration platform.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://developer.microsoft.com/en-us/microsoft-teams
-    tags:
-      - Chat
-      - Collaboration
-      - Meetings
-      - Teams
-    properties:
-      - type: Documentation
-        url: https://learn.microsoft.com/en-us/microsoftteams/platform/
-      - type: Bot Framework
-        url: https://dev.botframework.com/
-      - type: SDKs
-        url: https://learn.microsoft.com/en-us/microsoftteams/platform/resources/tools-and-sdks
-  - name: OneDrive API
-    description: Access files stored in OneDrive and SharePoint.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://developer.microsoft.com/en-us/onedrive
-    tags:
-      - Files
-      - OneDrive
-      - SharePoint
-      - Storage
-    properties:
-      - type: Documentation
-        url: https://learn.microsoft.com/en-us/onedrive/developer/
-      - type: APIReference
-        url: https://learn.microsoft.com/en-us/onedrive/developer/rest-api/
-  - name: Power Platform APIs
-    description: APIs for Power Apps, Power Automate, and Power BI.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://powerplatform.microsoft.com
-    tags:
-      - Low Code
-      - Power Apps
-      - Power Automate
-      - Power BI
-      - Power Platform
-    properties:
-      - type: Documentation
-        url: https://learn.microsoft.com/en-us/power-platform/
-      - type: Power Apps API
-        url: https://learn.microsoft.com/en-us/powerapps/developer/data-platform/webapi/overview
-      - type: Power BI API
-        url: https://learn.microsoft.com/en-us/rest/api/power-bi/
-  - name: Azure Cognitive Services API
-    description: AI and machine learning APIs for vision, speech, language, and decision making.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://azure.microsoft.com/en-us/services/cognitive-services/
-    tags:
-      - AI
-      - Computer Vision
-      - Machine Learning
-      - NLP
-      - Speech
-    properties:
-      - type: Documentation
-        url: https://learn.microsoft.com/en-us/azure/cognitive-services/
-      - type: APIReference
-        url: https://learn.microsoft.com/en-us/azure/cognitive-services/reference/
-  - name: Dynamics 365 API
-    description: APIs for Dynamics 365 CRM and ERP applications.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://dynamics.microsoft.com
-    tags:
-      - Business Applications
-      - CRM
-      - Dynamics 365
-      - ERP
-    properties:
-      - type: Documentation
-        url: https://learn.microsoft.com/en-us/dynamics365/
-      - type: Web API
-        url: https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/overview
-  - name: Microsoft 365 Defender API
-    description: Security APIs for threat protection and incident response.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://security.microsoft.com
-    tags:
-      - Defender
-      - Incidents
-      - Security
-      - Threat Protection
-    properties:
-      - type: Documentation
-        url: https://learn.microsoft.com/en-us/microsoft-365/security/defender/
-      - type: APIReference
-        url: https://learn.microsoft.com/en-us/microsoft-365/security/defender/api-overview
-  - name: Xbox Live API
-    description: APIs for Xbox gaming services and social features.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://developer.microsoft.com/en-us/games/xbox
-    tags:
-      - Achievements
-      - Gaming
-      - Social
-      - Xbox
-    properties:
-      - type: Documentation
-        url: https://learn.microsoft.com/en-us/gaming/xbox-live/
-      - type: APIReference
-        url: https://learn.microsoft.com/en-us/gaming/xbox-live/api-ref/
+- name: Azure REST API
+  description: REST APIs for Azure cloud services and resource management.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://azure.microsoft.com
+  tags:
+  - Azure
+  - Cloud
+  - Infrastructure
+  - Resource Management
+  properties:
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/rest/api/azure/
+  - type: Authentication
+    url: https://learn.microsoft.com/en-us/azure/active-directory/develop/
+  - type: APIReference
+    url: https://learn.microsoft.com/en-us/rest/api/
+- name: Office 365 APIs
+  description: APIs for Office 365 applications including Outlook, Calendar, Contacts, and Files.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://developer.microsoft.com/en-us/office
+  tags:
+  - Calendar
+  - Email
+  - Office 365
+  - Outlook
+  properties:
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/office/dev/add-ins/
+  - type: GettingStarted
+    url: https://developer.microsoft.com/en-us/office/getting-started
+- name: Microsoft Teams API
+  description: Build apps and bots for the Microsoft Teams collaboration platform.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://developer.microsoft.com/en-us/microsoft-teams
+  tags:
+  - Chat
+  - Collaboration
+  - Meetings
+  - Teams
+  properties:
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/microsoftteams/platform/
+  - type: Bot Framework
+    url: https://dev.botframework.com/
+  - type: SDKs
+    url: https://learn.microsoft.com/en-us/microsoftteams/platform/resources/tools-and-sdks
+- name: OneDrive API
+  description: Access files stored in OneDrive and SharePoint.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://developer.microsoft.com/en-us/onedrive
+  tags:
+  - Files
+  - OneDrive
+  - SharePoint
+  - Storage
+  properties:
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/onedrive/developer/
+  - type: APIReference
+    url: https://learn.microsoft.com/en-us/onedrive/developer/rest-api/
+- name: Power Platform APIs
+  description: APIs for Power Apps, Power Automate, and Power BI.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://powerplatform.microsoft.com
+  tags:
+  - Low Code
+  - Power Apps
+  - Power Automate
+  - Power BI
+  - Power Platform
+  properties:
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/power-platform/
+  - type: Power Apps API
+    url: https://learn.microsoft.com/en-us/powerapps/developer/data-platform/webapi/overview
+  - type: Power BI API
+    url: https://learn.microsoft.com/en-us/rest/api/power-bi/
+- name: Azure Cognitive Services API
+  description: AI and machine learning APIs for vision, speech, language, and decision making.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://azure.microsoft.com/en-us/services/cognitive-services/
+  tags:
+  - AI
+  - Computer Vision
+  - Machine Learning
+  - NLP
+  - Speech
+  properties:
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/azure/cognitive-services/
+  - type: APIReference
+    url: https://learn.microsoft.com/en-us/azure/cognitive-services/reference/
+- name: Dynamics 365 API
+  description: APIs for Dynamics 365 CRM and ERP applications.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://dynamics.microsoft.com
+  tags:
+  - Business Applications
+  - CRM
+  - Dynamics 365
+  - ERP
+  properties:
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/dynamics365/
+  - type: Web API
+    url: https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/overview
+- name: Microsoft 365 Defender API
+  description: Security APIs for threat protection and incident response.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://security.microsoft.com
+  tags:
+  - Defender
+  - Incidents
+  - Security
+  - Threat Protection
+  properties:
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/microsoft-365/security/defender/
+  - type: APIReference
+    url: https://learn.microsoft.com/en-us/microsoft-365/security/defender/api-overview
+- name: Xbox Live API
+  description: APIs for Xbox gaming services and social features.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://developer.microsoft.com/en-us/games/xbox
+  tags:
+  - Achievements
+  - Gaming
+  - Social
+  - Xbox
+  properties:
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/gaming/xbox-live/
+  - type: APIReference
+    url: https://learn.microsoft.com/en-us/gaming/xbox-live/api-ref/
+- aid: ms-products:ms-products-calendar-api
+  name: Microsoft Products APIs Calendar API
+  description: Outlook calendar events for the signed-in user.
+  humanURL: https://developer.microsoft.com/en-us/graph
+  baseURL: https://graph.microsoft.com/v1.0
+  tags:
+  - Calendar
+  properties:
+  - type: OpenAPI
+    url: openapi/ms-products-calendar-api-openapi.yml
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/graph/
+  - type: Authentication
+    url: https://learn.microsoft.com/en-us/graph/auth/
+  - type: SDKs
+    url: https://learn.microsoft.com/en-us/graph/sdks/sdks-overview
+- aid: ms-products:ms-products-groups-api
+  name: Microsoft Products APIs Groups API
+  description: Microsoft 365 groups and security groups.
+  humanURL: https://developer.microsoft.com/en-us/graph
+  baseURL: https://graph.microsoft.com/v1.0
+  tags:
+  - Groups
+  properties:
+  - type: OpenAPI
+    url: openapi/ms-products-groups-api-openapi.yml
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/graph/
+  - type: Authentication
+    url: https://learn.microsoft.com/en-us/graph/auth/
+  - type: SDKs
+    url: https://learn.microsoft.com/en-us/graph/sdks/sdks-overview
+- aid: ms-products:ms-products-mail-api
+  name: Microsoft Products APIs Mail API
+  description: Outlook mail messages for the signed-in user.
+  humanURL: https://developer.microsoft.com/en-us/graph
+  baseURL: https://graph.microsoft.com/v1.0
+  tags:
+  - Mail
+  properties:
+  - type: OpenAPI
+    url: openapi/ms-products-mail-api-openapi.yml
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/graph/
+  - type: Authentication
+    url: https://learn.microsoft.com/en-us/graph/auth/
+  - type: SDKs
+    url: https://learn.microsoft.com/en-us/graph/sdks/sdks-overview
+- aid: ms-products:ms-products-me-api
+  name: Microsoft Products APIs Me API
+  description: Operations on the signed-in user.
+  humanURL: https://developer.microsoft.com/en-us/graph
+  baseURL: https://graph.microsoft.com/v1.0
+  tags:
+  - Me
+  properties:
+  - type: OpenAPI
+    url: openapi/ms-products-me-api-openapi.yml
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/graph/
+  - type: Authentication
+    url: https://learn.microsoft.com/en-us/graph/auth/
+  - type: SDKs
+    url: https://learn.microsoft.com/en-us/graph/sdks/sdks-overview
+- aid: ms-products:ms-products-users-api
+  name: Microsoft Products APIs Users API
+  description: User accounts and profiles in Microsoft Entra ID.
+  humanURL: https://developer.microsoft.com/en-us/graph
+  baseURL: https://graph.microsoft.com/v1.0
+  tags:
+  - Users
+  properties:
+  - type: OpenAPI
+    url: openapi/ms-products-users-api-openapi.yml
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/graph/
+  - type: Authentication
+    url: https://learn.microsoft.com/en-us/graph/auth/
+  - type: SDKs
+    url: https://learn.microsoft.com/en-us/graph/sdks/sdks-overview
 common:
   - type: AgenticAccess
     url: agentic-access/ms-products-agentic-access.yml
