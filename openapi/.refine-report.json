@@ -1,0 +1,22 @@
+{
+  "provider": "ms-products",
+  "sources": [
+    "ms-products-calendar-api-openapi.yml",
+    "ms-products-groups-api-openapi.yml",
+    "ms-products-mail-api-openapi.yml",
+    "ms-products-me-api-openapi.yml",
+    "ms-products-users-api-openapi.yml"
+  ],
+  "outputs": [
+    "ms-products-calendar-api-openapi.yml",
+    "ms-products-groups-api-openapi.yml",
+    "ms-products-mail-api-openapi.yml",
+    "ms-products-me-api-openapi.yml",
+    "ms-products-users-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
