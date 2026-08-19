@@ -1,0 +1,40 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Microsoft Graph API (v1.0) Calendar Mail API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "client_credentials",
+      "accessTokenUrl": "https://login.microsoftonline.com/common/oauth2/v2.0/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Mail",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List the signed-in user's Outlook messages",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://graph.microsoft.com/v1.0/me/messages"
+          },
+          "docs": "List the signed-in user's Outlook messages"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

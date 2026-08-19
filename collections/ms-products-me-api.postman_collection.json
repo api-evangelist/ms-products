@@ -1,0 +1,128 @@
+{
+  "item": [
+    {
+      "id": "f6463365-b2d6-431b-b6f1-3a2a3b877d22",
+      "name": "Me",
+      "description": {
+        "content": "Operations on the signed-in user.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "6b1ee454-e9c0-4e16-b2b9-95b7dd5530a8",
+          "name": "Get the profile of the signed-in user",
+          "request": {
+            "name": "Get the profile of the signed-in user",
+            "description": {},
+            "url": {
+              "path": [
+                "me"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "be365308-3250-4050-9725-4b7e2d565ab1",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "me"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"key_0\": 8626.247380146962,\n  \"key_1\": 877,\n  \"key_2\": \"string\",\n  \"key_3\": 9473.079494833846\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://graph.microsoft.com/v1.0",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "https://graph.microsoft.com/.default"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://login.microsoftonline.com/common/oauth2/v2.0/token"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://login.microsoftonline.com/common/oauth2/v2.0/authorize"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "072ae6bc-ea1c-42f4-89d3-e0e70c3d56f1",
+    "name": "Microsoft Graph API (v1.0) Calendar Me API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Unified Microsoft Graph REST API for accessing Microsoft 365, Entra ID (Azure AD), Outlook, OneDrive, Teams, Planner, and other services. All requests target the `https://graph.microsoft.com/v1.0` endpoint and use OAuth 2.0 (Microsoft identity platform) bearer tokens for authentication.\n\nContact Support:\n Name: Microsoft Graph",
+      "type": "text/plain"
+    }
+  }
+}

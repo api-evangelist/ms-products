@@ -1,0 +1,207 @@
+{
+  "item": [
+    {
+      "id": "9974f070-8a1c-4ca2-9faa-1a2cfec81484",
+      "name": "Calendar",
+      "description": {
+        "content": "Outlook calendar events for the signed-in user.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "34320ec7-1405-4c2b-b9c9-74044d7bbee2",
+          "name": "List the signed-in user's calendar events",
+          "request": {
+            "name": "List the signed-in user's calendar events",
+            "description": {},
+            "url": {
+              "path": [
+                "me",
+                "events"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a072c51e-4191-47f7-b10f-b6d25cab887e",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "me",
+                    "events"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"value\": [\n    {\n      \"key_0\": 7414,\n      \"key_1\": 4119.80454421929,\n      \"key_2\": true\n    },\n    {\n      \"key_0\": 7279.052388966562,\n      \"key_1\": true\n    }\n  ],\n  \"@odata.nextLink\": \"string\",\n  \"key_0\": \"string\",\n  \"key_1\": false,\n  \"key_2\": 4258.639894361749\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0d7f430c-5888-4027-894d-59be28668690",
+          "name": "Get the signed-in user's default calendar",
+          "request": {
+            "name": "Get the signed-in user's default calendar",
+            "description": {},
+            "url": {
+              "path": [
+                "me",
+                "calendar"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "212bead3-4772-47c1-b637-3c2df6987ea4",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "me",
+                    "calendar"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"key_0\": 1879,\n  \"key_1\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://graph.microsoft.com/v1.0",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "https://graph.microsoft.com/.default"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://login.microsoftonline.com/common/oauth2/v2.0/token"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://login.microsoftonline.com/common/oauth2/v2.0/authorize"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "a1a1a73a-d7c4-42ca-b693-22207f4f2a83",
+    "name": "Microsoft Graph API (v1.0) Calendar API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Unified Microsoft Graph REST API for accessing Microsoft 365, Entra ID (Azure AD), Outlook, OneDrive, Teams, Planner, and other services. All requests target the `https://graph.microsoft.com/v1.0` endpoint and use OAuth 2.0 (Microsoft identity platform) bearer tokens for authentication.\n\nContact Support:\n Name: Microsoft Graph",
+      "type": "text/plain"
+    }
+  }
+}

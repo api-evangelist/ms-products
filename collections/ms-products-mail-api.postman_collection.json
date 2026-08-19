@@ -1,0 +1,130 @@
+{
+  "item": [
+    {
+      "id": "3639cae0-37a5-4f55-8f51-0bfd11368f07",
+      "name": "Mail",
+      "description": {
+        "content": "Outlook mail messages for the signed-in user.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "09a62f53-973b-486d-8653-eead6188bb1c",
+          "name": "List the signed-in user's Outlook messages",
+          "request": {
+            "name": "List the signed-in user's Outlook messages",
+            "description": {},
+            "url": {
+              "path": [
+                "me",
+                "messages"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "59386967-6151-402a-a85f-8c37e54ffb0e",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "me",
+                    "messages"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"value\": [\n    {\n      \"key_0\": false,\n      \"key_1\": 1095,\n      \"key_2\": \"string\",\n      \"key_3\": 1066.2033526187288\n    },\n    {\n      \"key_0\": \"string\",\n      \"key_1\": true\n    }\n  ],\n  \"@odata.nextLink\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://graph.microsoft.com/v1.0",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "https://graph.microsoft.com/.default"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://login.microsoftonline.com/common/oauth2/v2.0/token"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://login.microsoftonline.com/common/oauth2/v2.0/authorize"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "e89f0b84-9a53-45f4-bfb4-1851a401c3c7",
+    "name": "Microsoft Graph API (v1.0) Calendar Mail API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Unified Microsoft Graph REST API for accessing Microsoft 365, Entra ID (Azure AD), Outlook, OneDrive, Teams, Planner, and other services. All requests target the `https://graph.microsoft.com/v1.0` endpoint and use OAuth 2.0 (Microsoft identity platform) bearer tokens for authentication.\n\nContact Support:\n Name: Microsoft Graph",
+      "type": "text/plain"
+    }
+  }
+}
