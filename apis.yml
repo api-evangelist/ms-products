@@ -117,7 +117,7 @@ apis:
   image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   humanURL: https://powerplatform.microsoft.com
   tags:
-  - Low Code
+  - Low-Code
   - Power Apps
   - Power Automate
   - Power BI
